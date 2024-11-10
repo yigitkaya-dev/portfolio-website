@@ -32,6 +32,7 @@ h2 {
     font-size: 1rem;
     margin-bottom: 5px; /* Adjust as needed */
     letter-spacing: 1px;
+    
 }
 
 .intro-text p {
@@ -162,7 +163,7 @@ h2 {
     left: 50%;  /* Center the navbar horizontally */
     transform: translateX(-50%); /* Offset by 50% of its own width */
     width: 92%;
-    max-width: 1300px;  /* Maximum width for the navbar */
+    max-width: 1320px;  /* Maximum width for the navbar */
     z-index: 1000;
 }
 
@@ -243,23 +244,28 @@ h2 {
 }
 
 .about-me-section {
-    max-width: 1300px;
-    margin: 20px auto; /* Adjust as needed to control spacing */
-    padding: 0 40px; /* Set padding-top to 0 to remove extra space */
+    max-width: 800px;
+    margin: 40px auto; /* Adds more space around the section */
+    padding: 30px 50px; /* Adds padding inside the section */
     color: #333333;
-    font-size: 1rem;
+    background-color: #f9f9f9; /* Light background for better readability */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    line-height: 1.8; /* Increases line spacing */
+    font-size: 1.4rem; /* Larger font size for paragraph text */
 }
 
 .about-me-section h2 {
-    font-size: 2rem;
-    color: #FF5C00; /* Use a matching color for the heading */
+    font-size: 3rem; /* Larger font size for heading */
+    color: #FF5C00; /* Accent color for the heading */
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .about-me-section p {
-    line-height: 1.6;
-    margin-bottom: 15px;
+    margin-bottom: 25px; /* Adds more space between paragraphs */
+    text-align: justify; /* Justifies text for a cleaner look */
+    font-size: 1.3rem; /* Larger font size for paragraph text */
 }
 .work-experience-section {
     max-width: 800px;
@@ -330,4 +336,7 @@ h2 {
 
 .contact-details p {
     margin: 5px 0;
+}
+html {
+    scroll-behavior: smooth;
 }

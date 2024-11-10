@@ -84,6 +84,15 @@ DATABASES = {
     }
 }
 
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'email-smtp.us-west-2.amazonaws.com'  # Replace with the region you selected
+EMAIL_PORT = 587  # You can also use 465 for SSL
+EMAIL_USE_TLS = True  # Use TLS encryption
+EMAIL_HOST_USER = 'AKIA6DY7EJ4ZYLBVTOOC'  # The SMTP username from the SES credentials
+EMAIL_HOST_PASSWORD = 'BLkEnD5IhyJ4Jhiwxk0AEsg/0h+xPWS3PvMN6hiDym16'  # The SMTP password from the SES credentials
+DEFAULT_FROM_EMAIL = 'yigitkaya1411@gmail.com'  # Set this to the email address you want to use
+
+
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
