@@ -2,39 +2,129 @@
 <!DOCTYPE html>
 <html lang ="eng">
 <head>
+    <link rel="icon" href="{% static 'images/yigit.png' %}" type="image/x-icon">
     <meta charset = "UTF-8">
     <meta name = "viewport" content="width = device-width, initial-scale=1.0">
     <title> Home - My Portfolio </title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
-    <div class="intro-section">
-        <div class = "intro-text">
-            <p>Welcome to my website</p>
-            <h1>Hi, I'm <span>Yigit Kaya</span><br> a Developer...</h1>
-            <p>I am a senior at Virginia Tech studying Computer Engineering, </p>
-            <p>with a focus on backend engineering and software development.</p>
-        </div>
-        <div class = "circle-container">
-            <div class="circle">
-                <span>C++</span>
+    <div class="wrapper">
+        <div class="intro-section">
+            <div class="intro-text">
+                <p>Welcome to my website</p>
+                <h1>Hi, I'm <span>Yigit Kaya</span><br> a Developer...</h1>
+                <p>I am a senior at Virginia Tech studying Computer Engineering,</p>
+                <p>with a focus on backend engineering and software development.</p>
+                <div class="circle-container">
+                    <div class="circle">
+                        <a href="{% url 'about' %}"><span>My Experiences </span></a>
+                    </div>
+                </div>
+                <div class="tags-container">
+                    <div class="tag cplusplus">Python</div>
+                    <div class="tag java">C++</div>
+                    <div class="tag php">Java </div>
+                    <div class="tag javascript">PostgreSQL</div>
+                </div>
+                <div class="tags-container2">
+                    <div class="tag cplusplus">Django</div>
+                    <div class="tag php">AWS </div>
+                </div>
             </div>
-            <div class="circle">
-                <span>Python</span>
+            
+            <div class="image-container">
+                <div class="circle-background">
+                    <img src="{% static 'images/yigit.png' %}" alt="Photo">
+                </div>
             </div>
         </div>
-        <div class="intro-image">
-            <img src="{% static 'images/yigitkaya.png'%}" alt="Photo">
-
+        <div class="about-me-section">
+            <h2>About Me</h2>
+            <p>I'm a senior at Virginia Tech studying Computer Engineering with a focus on backend engineering and software development. I enjoy building efficient systems, solving complex problems, and constantly learning new technologies to improve my skills.</p>
+            <p>Aside from coding, I have a passion for <your interests here, e.g., sailing, technology, or any other interests>. I'm always looking for opportunities to grow and contribute to meaningful projects.</p>
+        </div>
+        <div class="about-me-section">
+            <h2>Work Experiences</h2>
+            <div class="work-experience-section">
+                <div class="experience-box">
+                    <h3>AutoNation Inc, Fort Lauderdale, FL</h3>
+                    <p><strong>Software Development Intern</strong></p>
+                    <p>June 2023 - August 2023</p>
+                    <ul>
+                        <li>Enhanced the company's Electronic products Content Management (ECM) application by integrating proactive caching in the MS SQL database, achieving a 70% time efficiency increase when accessing sales repositories.</li>
+                        <li>Developed a Java script to auto-update the items inside the cache table every 5 minutes, anticipating future queries and reducing maintenance needs.</li>
+                        <li>Collaborated closely with management and sales teams across multiple AutoNation dealerships to identify and strategize software solutions, optimizing the car sales process for maximum efficiency and effectiveness.</li>
+                        <li>Resolved discrepancies and bugs on the corporate website, including an auto sign-off issue using HTML and JavaScript, enhancing site security by ensuring consistent sign-offs during idle periods.</li>
+                    </ul>
+                </div>
+                <div class="experience-box">
+                    <h3>Kaya Ropes, Istanbul, Turkey</h3>
+                    <p><strong>Software Engineering Intern</strong></p>
+                    <p>June 2022 - August 2022</p>
+                    <ul>
+                        <li>Developed a Python-based receipt scanner app integrating Tesseract OCR to automate extraction of data from physical receipts.</li>
+                        <li>Collaborated on database integration for seamless data storage and retrieval, handling diverse receipt formats.</li>
+                        <li>Optimized OCR accuracy, achieving 87% accuracy rate, leading to a major reduction in manual data entry.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="about-me-section">
+            <h2>Projects</h2>
+            <div class="work-experience-section">
+                <div class="experience-box">
+                    <h3>Boeing and Virginia Tech, Blacksburg, VA</h3>
+                    <p><strong>BLE Mesh Network Developer (Senior Design Project)</strong></p>
+                    <p>January 2024 - Present</p>
+                    <ul>
+                        <li>Working towards developing a Bluetooth Low Energy (BLE) mesh network designed to enhance inventory management and operational efficiency in large-scale warehouse environments.</li>
+                        <li>Providing real-time tracking and communication capabilities with BLE-tagged items, ensuring seamless inventory processes.</li>
+                        <li>Utilizing C programming to implement and optimize network protocols for the BLE mesh network.</li>
+                        <li>Aiming to reduce manual workload and improve operational accuracy.</li>
+                    </ul>
+                </div>
+                <div class="experience-box">
+                    <h3>Wind Turbine Team, Blacksburg, VA</h3>
+                    <p><strong>Power Systems and Control Team Co-Lead</strong></p>
+                    <p>September 2022 - August 2024</p>
+                    <ul>
+                        <li>Led a team of computer and electrical engineering students in the design and implementation of hardware and software solutions for a wind turbine model, annually competing in the U.S. Department of Energy's CWC.</li>
+                        <li>Conducted research on software solutions to optimize power output and present findings in weekly meetings.</li>
+                        <li>Optimized power efficiency by manipulating the STM32 microcontroller used in our wind turbine, employing C programming language to minimize current consumption.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="contact-me-section">
+            <h2>Contact Me</h2>
+                <p>If you’d like to get in touch, feel free to reach out via email or phone.</p>
+                <div class="contact-details">
+                    <p><strong>Email:</strong> yigitkaya1411@gmail.com</p>
+                    <p><strong>Phone:</strong> (561) 344-5232</p>
+                </div>
+            </div>
         </div>
     </div>
-
+    
+    
     <div class="nav-rectangle">
-        <a href="{% url 'home' %}">Home </a>
-        <a href="{% url 'projects' %}">Projects</a>
-        <a href="{% url 'about' %}">About</a>
-        <a href="{% url 'contact' %}">Contact</a>
-        <a href="{% static 'files/resume.pdf' %}" target="_blank"> Resume </a>
+        <div class="nav-links">
+            <a href="{% url 'home' %}">Home</a>
+            <a href="{% url 'projects' %}">Projects</a>
+            <a href="{% url 'about' %}">About Me</a>
+            <a href="{% url 'contact' %}">Contact</a>
+            <a href="{% static 'files/resume.pdf' %}" target="_blank">Resume</a>
+        </div>
+        <div class="nav-images">
+            <a href="https://github.com/yigitkaya-dev?tab=repositories">
+                <img src="{% static 'images/github.png' %}" alt="github_img" class="nav-image">
+            </a>
+            <a href="https://www.linkedin.com/in/yigit-kaya-/">
+                <img src="{% static 'images/linkedinlogo.png' %}" alt="linkedin_img" class="nav-image2">
+            </a>
+
+        </div>
     </div>
 
 </body>

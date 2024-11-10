@@ -1,62 +1,113 @@
 body{
-    background-color: #1d1f27;
+    background-color: #ffffff;
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 h1 {
-    font-size: 5em !important;
+    font-size: 4.5em !important;
    
+}
+
+h2 {
+    font-size: 4em !important;
 }
 
 .intro-section {
     display: flex;
     align-items: center; 
     justify-content: space-between; 
-    padding: 50px;
-    background-color: #1d1f27;
-    color: #ffffff; 
-    width: 100%;
-    max-width: 1400px;
-    margin: 0 auto;
-    height: 100vh; 
+    padding: 100px 0; /* Adjust as needed to control internal padding */
+    background-color: #ffffff;
+    color: #000000; 
+    width: 90%;
+    max-width: 1300px;
+    margin: 100px auto 0 auto; /* Adds space above the intro section */
+    height: auto;
 }
 
 
-.intro-text {
-    max-width: 50%; 
+.intro-text p {
+    color: #2b2a2a; 
+    font-size: 1rem;
+    margin-bottom: 5px; /* Adjust as needed */
+    letter-spacing: 1px;
 }
 
 .intro-text p {
-    color: #aaaaaa; 
-    font-size: 1rem;
+    color: #2b2a2a; 
+    font-size: 1.2rem;
     margin-bottom: 10px;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
 }
 
 .intro-text h1 {
     font-size: 3rem;
     margin: 0;
-    color: #ffffff;
+    color: #000000;
+    
 }
 
 .intro-text h1 span {
-    color: #ff0055; 
+    color: #Fe5c00; 
 }
 
+
+
 .intro-image {
-    max-width: 45%; 
+    max-width: 55%; 
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .intro-image img {
-    width: 100%; 
-    max-width: 250px;
-    height: auto;
-    border-radius: 8px; 
+    width: 100%; /* Adjust image width to fill the circle */
+    height: 100%; /* Ensure image height covers the entire circle */
+    object-fit: cover; /* Ensures the image covers the circle without stretching */
+    border-radius: 50%; /* Keep the image round */
+    position: absolute;
+    bottom: 0;  /* Aligns the bottom of the image with the bottom of the circle */
+    left: 0;
+    right: 0;
+    top: 0;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 0;
+    margin-left: 150px;
+    margin-bottom: -50px;
 }
 
 
-@media (max-width: 300px) {
+.circle-background {
+    width: 400px; /* Adjust size of circle */
+    height: 400px; /* Adjust size of circle */
+    background-color: #Fe5c00;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 0;
+    margin-top: 10px;
+}
+
+.image-container img {
+    width: 105%; /* Make image fit inside the circle */
+    height: auto;
+    border-radius: 80%; /* Ensure image is round */
+    margin-bottom: 200px;
+    margin-right: 0px;
+    z-index:1; /* Place image above the circle */
+}
+
+@media (max-width: 500px) {
     .intro-section {
         flex-direction: column;
         text-align: center;
@@ -69,52 +120,214 @@ h1 {
     }
 }
 
-.circle-container{
+
+.circle-container {
+    text-decoration: none;
     display: flex;
-    justify-self: center;
-    margin: 20px 0;
+    justify-content: center; /* Center the buttons horizontally */
+    margin: 40px 0; /* Add some margin if needed */
 }
-.circle{
-    width: 100px;
-    height: 100px;
-    background-color: #ff5733;
+.circle-container a {
+    text-decoration: none;
     color: white;
+}
+.circle {
+    width: 200px; /* Adjust the width of the button */
+    height: 60px; /* Adjust the height of the button */
+    background-color: #fe5c00; /* Set the background color */
+    color: white; /* Set text color */
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 50%;
+    border-radius: 30px; /* This gives it a rounded pill shape */
     margin: 0 15px;
     font-weight: bold;
     transition: background-color 0.3s;
+    text-align: center;
+    transform: translateX(-210px); /* Move the button 20px to the left */
 }
 
 .circle:hover {
-    background-color: #ff8d33;
+    background-color: #ff8d33; /* Hover color */
 }
 
 .nav-rectangle {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between; /* Space out nav links on the left and images on the right */
     align-items: center;
-    width: 100%; 
     padding: 30px 0;
-    background-color: #1d1f27;
+    background-color: #ffffff;
     position: fixed;
     top: 0;
-    left: 0; 
+    left: 50%;  /* Center the navbar horizontally */
+    transform: translateX(-50%); /* Offset by 50% of its own width */
+    width: 92%;
+    max-width: 1300px;  /* Maximum width for the navbar */
     z-index: 1000;
+}
 
+.nav-links {
+    display: flex;
+    gap: 30px; /* Space between the links */
 }
 
 .nav-rectangle a {
-    color: #fff;
+    color: #000000; /* Make text white */
     font-size: 18px;
     text-decoration: none;
-    margin: 0 30px;
-    font-weight: bold;
 }
 
-.nav-rectangle a:hover{
+.nav-rectangle a:hover {
     color: #ff9800;
+}
 
+.nav-images {
+    display: flex;
+    gap: 20px; /* Space between the images */
+}
+
+.nav-image {
+    width: 50px; /* Set the size of the GitHub icon */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.nav-image2 {
+    width: 50px; /* Set the size of the LinkedIn icon */
+    height: 20px;
+    height: auto; /* Maintain aspect ratio */
+}
+.tags-container {
+    margin-bottom: 20px;
+    display: flex; /* Arrange the tags in a row */
+    gap: 20px; /* Add space between the tags */
+    flex-wrap: wrap; /* Allow tags to wrap onto new lines if needed */
+}
+.tags-container2 {
+    margin-left: 100px;
+    margin-bottom: 20px;
+    display: flex; /* Arrange the tags in a row */
+    gap: 20px; /* Add space between the tags */
+    flex-wrap: wrap; /* Allow tags to wrap onto new lines if needed */
+}
+.tag {
+    padding: 10px 20px; /* Add padding inside the tag */
+    font-size: 16px; /* Adjust text size */
+    border-radius: 20px; /* Round the corners */
+    font-weight: bold; /* Make text bold */
+    text-align: center; /* Center the text inside the tag */
+}
+
+.cplusplus {
+    background-color: #FF5C00; /* Orange for C++ */
+    color: white;
+}
+
+.java {
+    background-color: #FF8C00; /* Slightly lighter orange for Java */
+    color: white;
+}
+
+.php {
+    background-color: #333333; /* Black for PHP */
+    color: white;
+}
+
+.javascript {
+    background-color: #F1F1F1; /* Light gray for JavaScript */
+    color: #333333;
+}
+
+/* Optional: Add hover effect to make them interactive */
+.tag:hover {
+    opacity: 0.8;
+}
+
+.about-me-section {
+    max-width: 1300px;
+    margin: 20px auto; /* Adjust as needed to control spacing */
+    padding: 0 40px; /* Set padding-top to 0 to remove extra space */
+    color: #333333;
+    font-size: 1rem;
+}
+
+.about-me-section h2 {
+    font-size: 2rem;
+    color: #FF5C00; /* Use a matching color for the heading */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.about-me-section p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+.work-experience-section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.experience-box {
+    background-color: #f9f9f9; /* Light background for the boxes */
+    border: 1px solid #e0e0e0; /* Light gray border */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px;
+    margin-bottom: 20px; /* Space between boxes */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.experience-box h3 {
+    font-size: 1.3rem;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.experience-box p {
+    color: #666;
+    font-size: 0.9rem;
+    margin: 5px 0;
+}
+
+.experience-box ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.experience-box ul li {
+    color: #333;
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+}
+
+.experience-box strong {
+    font-weight: bold;
+    color: #FF5C00; /* Accent color to match the theme */
+}
+
+.contact-me-section {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: center;
+    color: #333333;
+    font-size: 1rem;
+}
+
+.contact-me-section h2 {
+    font-size: 2rem;
+    color: #FF5C00; /* Accent color for the heading */
+    margin-bottom: 20px;
+}
+
+.contact-me-section p {
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.contact-details {
+    font-size: 1.1rem;
+}
+
+.contact-details p {
+    margin: 5px 0;
 }
